@@ -1,8 +1,44 @@
-﻿@{
+﻿@using RestSharp
+@using System.Linq
+@using Newtonsoft.Json.Linq
+
+@model Root
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Language Translator</h1>
+    <p>Welcome to language translator! This is how it works... You enter your text, Then you enter the language of that text, or auto, and then you enter the language you want it translated to!</p>
 </div>
+
+
+
+
+
+
+
+
+<form action="/Home/Translate" method="post" class="text-center">
+    <label for="inputLang">Choose an initial Language</label>
+    <select class="form-control" name="inputLang" value="">
+        <option value="auto">Auto</option>
+        @foreach (var item in Model.data.languages)
+        {
+            <option value="@item.code">@item.name (@item.code)</option>
+        }
+    </select>
+
+    <label for="translateLang">Choose a Language to translate to</label>
+    <select class="form-control" name="translateLang" value="">
+        @foreach (var item in Model.data.languages)
+        {
+            <option value="@item.code">@item.name (@item.code)</option>
+        }
+    </select>
+    <textarea name="text" class="textboxsize" placeholder="Enter your text..."></textarea>
+
+
+    <input type="submit" value="Translate"  />
+</form>

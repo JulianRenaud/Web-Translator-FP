@@ -7,4 +7,14 @@
     <RootNamespace>Web_Translator_FP</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Images\LT_Full_Logo.jpg" />
+    <None Include="wwwroot\Images\LT_Logo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="108.0.3-alpha.0.5" />
+  </ItemGroup>
+
 </Project>

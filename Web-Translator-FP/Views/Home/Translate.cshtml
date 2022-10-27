@@ -1,0 +1,21 @@
+﻿@using RestSharp
+@model RootT
+@{
+    ViewData["Title"] = "Translated Text";
+
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <p>This is the translated text!</p>
+    <hr>
+</div>
+
+
+<h6 class="text-center">@Model.DataT.DetectedSourceLanguage</h6>
+<h1></h1>
+<h6 class="text-center">@Model.DataT.TranslatedText</h6>
+
+
+
