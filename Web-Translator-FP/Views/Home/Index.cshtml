@@ -8,9 +8,9 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Language Translator</h1>
-    <p>Welcome to language translator! This is how it works... You enter your text, Then you enter the language of that text, or auto, and then you enter the language you want it translated to!</p>
+<div class="text-center" id="text-color">
+    <h1 class="display-4" id="text-shadow">Language Translator</h1>
+    <p id="text-shadow">Welcome to language translator! This is how it works... You enter your text, Then you enter the language of that text, or auto, and then you enter the language you want it translated to!</p>
 </div>
 
 
@@ -19,26 +19,28 @@
 
 
 
+<div id="text-color">
+    <form action="/Home/Translate" method="post" class="text-center">
+        <label  style="margin: 5px"for="inputLang" id="text-shadow">Choose an initial Language</label>
+        <select class="form-control" name="inputLang" value="" id="box-shadow">
+            <option value="auto">Auto</option>
+            @foreach (var item in Model.data.languages)
+            {
+                <option value="@item.code">@item.name (@item.code)</option>
+            }
+        </select>
 
-<form action="/Home/Translate" method="post" class="text-center">
-    <label for="inputLang">Choose an initial Language</label>
-    <select class="form-control" name="inputLang" value="">
-        <option value="auto">Auto</option>
-        @foreach (var item in Model.data.languages)
-        {
-            <option value="@item.code">@item.name (@item.code)</option>
-        }
-    </select>
+        <label style="margin: 5px" for="translateLang" id="text-shadow">Choose a Language to translate to</label>
+        <select class="form-control" name="translateLang" value="" id="box-shadow">
+            @foreach (var item in Model.data.languages)
+            {
+                <option value="@item.code">@item.name (@item.code)</option>
+            }
+        </select>
+        <textarea name="text" class="textboxsize" placeholder="Enter your text..." id="box-shadow"></textarea>
 
-    <label for="translateLang">Choose a Language to translate to</label>
-    <select class="form-control" name="translateLang" value="">
-        @foreach (var item in Model.data.languages)
-        {
-            <option value="@item.code">@item.name (@item.code)</option>
-        }
-    </select>
-    <textarea name="text" class="textboxsize" placeholder="Enter your text..."></textarea>
-
-
-    <input type="submit" value="Translate"  />
-</form>
+        <div>
+            <button type="submit" class="btn btn-success form-control" id="button"><h5>Translate</h5></button>
+        </div>
+    </form>
+</div>

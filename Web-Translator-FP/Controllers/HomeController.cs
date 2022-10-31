@@ -41,12 +41,16 @@ namespace Web_Translator_FP.Controllers
             var roott = translate.Translate(inputLang, translateLang, text);
             return View(roott);
         }
-        //public IActionResult Detect(string inputLang, string translateLang, string text)
-        //{
-        //    var translate = new API();
-        //    var roott = translate.Translate(inputLang, translateLang, text);
-        //    return View(roott);
-        //}
+        public IActionResult DetectIndex(string text)
+        {
+            return View();
+        }
+        public IActionResult Detect(string text)
+        {
+            var translate = new API();
+            var roott = translate.Detect(text);
+            return View(roott);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

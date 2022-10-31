@@ -1,26 +1,14 @@
-﻿@*@using RestSharp
+﻿@using RestSharp
 @model RootT
 @{
-    ViewData["Title"] = "Translated Text";
+    ViewData["Title"] = "Detected";
 
 }
 
-<h1 class="text-center">@ViewData["Title"]</h1>
 
-<div class="text-center">
-    <p>Please input text to detect the language</p>
+<div class="text-center" id="text-color">
+    <h1>Detected</h1>
+    <p>The language was detected!</p>
 </div>
 
-<form action="/Home/Detect" method="post" class="text-center">
-    <textarea name="text" class="textboxsize" placeholder="Enter your text..."></textarea>
-
-    
-
-    <input type="submit" value="Detect" />
-</form>
-
-<h6 class="text-center"><strong>@Model.DataT.DetectedSourceLanguage</strong></h6>
-
-*@
-
-
+<h6 class="text-center" id="text-color">Language: <strong>@Model.DataT.DetectedSourceLanguage.Name (@Model.DataT.DetectedSourceLanguage.Code)</strong></h6>

@@ -5,9 +5,9 @@
     
 }
 
-<h1 class ="text-center">@ViewData["Title"]</h1>
 
-<div class="text-center">
+<div class="text-center" id="text-color">
+    <h1 class="display-4">Supported Languages</h1>
     <p>Here is a list with all of the supported languages!</p>
     <hr>
 </div>
@@ -15,7 +15,7 @@
 
 @foreach (var item in Model.data.languages)
 {
-    
-    <h6 class="text-center">@item.name (@item.code)</h6>
+
+    <h6 class="text-center" id="text-color">@item.name (@item.code)</h6>
 }
 
