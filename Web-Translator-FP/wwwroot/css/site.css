@@ -54,7 +54,12 @@ body {
 }
 
 #styling {
-    background-color: #93d7eb;
+    background-image: url('/Images/wiof.jfif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /*style="background-image: url('./Images/BTW.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"*/
+    /*background-color: #93d7eb;*/
 }
 
 #button {
