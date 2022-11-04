@@ -10,7 +10,7 @@
 
 <div class="text-center" id="text-color">
     <h1 class="display-4" id="text-shadow">Language Translator</h1>
-    <p id="text-shadow">Welcome to language translator! This is how it works... You enter your text, Then you enter the language of that text, or auto, and then you enter the language you want it translated to!</p>
+    <h6 id="text-shadow">Welcome to language translator! This is how it works... You enter your text, Then you enter the language of that text, or auto, and then you enter the language you want it translated to!</h6>
 </div>
 
 
@@ -21,7 +21,7 @@
 
 <div id="text-color">
     <form action="/Home/Translate" method="post" class="text-center">
-        <label  style="margin: 5px"for="inputLang" id="text-shadow">Choose an initial Language</label>
+        <label style="margin: 20px" for="inputLang"><h4>Choose an initial Language</h4></label>
         <select class="form-control" name="inputLang" value="" id="box-shadow">
             <option value="auto">Auto</option>
             @foreach (var item in Model.data.languages)
@@ -30,14 +30,14 @@
             }
         </select>
 
-        <label style="margin: 5px" for="translateLang" id="text-shadow">Choose a Language to translate to</label>
+        <label style="margin: 20px" for="translateLang" id="text-shadow"><h4>Choose a Language to translate to</h4></label>
         <select class="form-control" name="translateLang" value="" id="box-shadow">
             @foreach (var item in Model.data.languages)
             {
                 <option value="@item.code">@item.name (@item.code)</option>
             }
         </select>
-        <textarea name="text" class="textboxsize" placeholder="Enter your text..." id="box-shadow"></textarea>
+        <textarea name="text" class="textboxsize" placeholder="Enter your text..." style="padding:1px" id="box-shadow" required></textarea>
 
         <div>
             <button type="submit" class="btn btn-success form-control" id="button"><h5>Translate</h5></button>

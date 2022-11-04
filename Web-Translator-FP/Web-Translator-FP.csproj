@@ -8,12 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\css\Bootswatch.css" />
+    <Content Remove="wwwroot\Images\3298158.jpg" />
+    <Content Remove="wwwroot\Images\global-world-map-with-digital-verticle-lines.zip" />
+    <Content Remove="wwwroot\Images\LT_Full_Logo.jpg" />
+    <Content Remove="wwwroot\Images\LT_Logo.jpg" />
+    <Content Remove="wwwroot\Images\LT_T_C.png" />
+    <Content Remove="wwwroot\Images\SL-112119-25250-54.jpg" />
+    <Content Remove="wwwroot\Images\tempLTC.png" />
+    <Content Remove="wwwroot\Images\wm.zip" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\Images\LT_Full_Logo.jpg" />
-    <None Include="wwwroot\Images\LT_Logo.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\Bootswatch.css" />
   </ItemGroup>
 
   <ItemGroup>

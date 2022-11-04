@@ -28,7 +28,7 @@ body {
 }
 
 .textboxsize {
-    background-color: white;
+    background-color: lightgrey;
     width: 1200px;
     height: 350px;
     margin: 50px;
@@ -54,32 +54,35 @@ body {
 }
 
 #styling {
-    background-color: #000001;
+    background-image: url('/Images/MAP.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #button {
-    color: black;
+    color: white;
     width: 150px;
-    background-color: cyan;
+    background-color: #000001;
     text-align: center;
     vertical-align: middle;
-    border: 1px solid white;
-    box-shadow: 1px 3px 10px black;
+    border: 1px solid black;
+    box-shadow: 0px 0px 30px 3px #000001;
     border-radius: 5px;
+    margin: 20px;
 }
 
 #text-color {
-    color: cyan;
+    color: #000001;
 }
 
 #box-shadow {
-    box-shadow: 1px 3px 10px black;
-}
-
-#text-shadow {
-    text-shadow: 1px 3x 5px black;
+    box-shadow: 0px 0px 20px 1px #000001;
+    background-color: white;
+    color: #000001;
+    border-color: grey;
 }
 
 #navbartext {
-    color: black;
+    color: white;
 }
