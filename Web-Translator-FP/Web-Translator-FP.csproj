@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\Bootswatch.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\Images\LT_Full_Logo.jpg" />
     <None Include="wwwroot\Images\LT_Logo.jpg" />
   </ItemGroup>
